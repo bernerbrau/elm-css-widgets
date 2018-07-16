@@ -25,6 +25,7 @@ bar color_ type_ children =
         [ HS.div
             [ css
                 [ position fixed
+                , zIndex (int 500)
                 , (case type_ of
                     Top ->
                         top <| px 0

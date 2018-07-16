@@ -1,12 +1,27 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "summary": "Opinionated, Drop-In widgets for beautiful Elm webapps.",
-    "repository": "https://github.com/user/project.git",
+    "repository": "https://github.com/bernerbrau/elm-css-widgets.git",
     "license": "BSD3",
     "source-directories": [
         "."
     ],
-    "exposed-modules": [ "Crayola", "Widgets.Bar", "Widgets.BarCorner", "Widgets.BarTabs", "Widgets.BarTitle", "Widgets.Button", "Widgets.HorizontalFlow", "Widgets.IconButton", "Widgets.Page", "Widgets.Paper", "Widgets.Screen", "Widgets.Sidebar", "Widgets.VerticalFlow", "Types.ButtonDef" ],
+    "exposed-modules": [
+        "Crayola",
+        "Widgets.Bar",
+        "Widgets.BarCorner",
+        "Widgets.BarTabs",
+        "Widgets.BarTitle",
+        "Widgets.Button",
+        "Widgets.HorizontalFlow",
+        "Widgets.IconButton",
+        "Widgets.Page",
+        "Widgets.Paper",
+        "Widgets.Screen",
+        "Widgets.Sidebar",
+        "Widgets.VerticalFlow",
+        "Types.ButtonDef"
+    ],
     "dependencies": {
         "HolyMeekrob/elm-font-awesome-5": "2.2.0 <= v < 3.0.0",
         "elm-lang/core": "5.1.1 <= v < 6.0.0",
