@@ -110,11 +110,11 @@ clearRectangleButton size active_ msg children =
             , fontSize <| px <| size * 7 / 12
             , textAlign <| center
             , lineHeight <| px size
-            , margin <| px 5
+            , margin <| px 7
             , color inherit
             , cursor pointer
-            , border3 (px 2) solid Css.transparent
             , whiteSpace noWrap
+            , border zero
             , opacity <|
                 if active_ then
                     num 1
@@ -130,9 +130,9 @@ clearRectangleButton size active_ msg children =
             , focus [ outline none ]
             ]
                 ++ if active_ then
-                    [ borderBottom2 (px 2) solid ]
+                    [ marginBottom (px 5), borderBottom2 (px 2) solid ]
                    else
-                    [ borderBottom3 (px 2) solid Css.transparent ]
+                    []
         ]
         children
 

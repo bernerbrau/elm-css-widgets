@@ -1,5 +1,11 @@
 module Widgets.BarTabs exposing (..)
 
+{-| In-app bar tab navigation
+
+@docs barTabs
+
+-}
+
 import Css exposing (..)
 import FontAwesome
 import Html.Styled as HS exposing (..)
@@ -8,6 +14,7 @@ import Types.ButtonDef exposing (ButtonDef)
 import Widgets.Private.Buttons exposing (clearRectangleButton, renderContents)
 
 
+{-| -}
 barTabs : List ( ButtonDef, Bool, msg ) -> Html msg
 barTabs tabs =
     HS.div

@@ -1,16 +1,24 @@
 module Widgets.Sidebar exposing (..)
 
+{-| Sidebar widget. Contains menu items or a list of data objects, etc. Must be used inside a HorizontalFlow.
+
+@docs sidebar, sidebarItem, sidebarDivider
+
+-}
+
 import Css exposing (..)
 import Css.Transitions as TRNS exposing (easeOut, transition)
 import Html.Styled as HS exposing (..)
+import Html.Styled.Keyed as SK exposing (..)
 import Html.Styled.Attributes as SA exposing (..)
 import Widgets.Private.Colors exposing (..)
 import Widgets.Private.CssExtra exposing (none, userSelect)
 
 
-sidebar : List (Html msg) -> Html msg
+{-| -}
+sidebar : List ( String, Html msg ) -> Html msg
 sidebar children =
-    HS.div
+    SK.node "div"
         [ css
             [ Css.width (px 325)
             , backgroundColor white
@@ -25,9 +33,11 @@ sidebar children =
         children
 
 
-sidebarItem : Bool -> List (Html msg) -> Html msg
-sidebarItem active_ children =
-    HS.div
+{-| -}
+sidebarItem : String -> Bool -> List (Html msg) -> ( String, Html msg )
+sidebarItem key active_ children =
+    ( key
+    , HS.div
         [ css
             [ position relative
             , borderBottom3 (px 1) solid nearTransparentBlack
@@ -47,11 +57,14 @@ sidebarItem active_ children =
             ]
         ]
         children
+    )
 
 
-sidebarDivider : String -> Html msg
+{-| -}
+sidebarDivider : String -> ( String, Html msg )
 sidebarDivider text_ =
-    HS.div
+    ( text_
+    , HS.div
         [ css
             [ position relative
             , color halfTransparentBlack
@@ -65,3 +78,4 @@ sidebarDivider text_ =
             ]
         ]
         [ text text_ ]
+    )

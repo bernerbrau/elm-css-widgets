@@ -1,5 +1,11 @@
 module Widgets.Button exposing (..)
 
+{-| Button with customizable color, size, and icon (optional)
+
+@docs button
+
+-}
+
 import Css exposing (..)
 import Css.Transitions as TRNS exposing (easeOut, transition)
 import FontAwesome exposing (icon, trash)
@@ -10,6 +16,7 @@ import Types.ButtonDef exposing (ButtonDef)
 import Widgets.Private.Buttons exposing (rectangleButton, renderContents)
 
 
+{-| -}
 button : Float -> Color -> ButtonDef -> msg -> Html msg
 button size color_ def msg =
     rectangleButton size color_ msg <|

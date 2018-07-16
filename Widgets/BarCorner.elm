@@ -1,5 +1,11 @@
 module Widgets.BarCorner exposing (..)
 
+{-| Action buttons or logo to go in the corner of the app bar; usually small buttons without text
+
+@docs barCorner, BarCornerSide
+
+-}
+
 import Css exposing (..)
 import Css.Transitions as TRNS exposing (easeOut, transition)
 import FontAwesome
@@ -9,11 +15,13 @@ import Html.Styled.Events as SE exposing (..)
 import Widgets.Private.Buttons exposing (clearCircleButton)
 
 
+{-| -}
 type BarCornerSide
     = LeftSide
     | RightSide
 
 
+{-| -}
 barCorner : BarCornerSide -> List ( FontAwesome.Icon, msg ) -> Html msg
 barCorner side children =
     HS.div

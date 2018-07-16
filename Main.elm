@@ -20,8 +20,9 @@ import Widgets.Sidebar exposing (sidebar, sidebarDivider, sidebarItem)
 import Widgets.VerticalFlow exposing (verticalFlow)
 
 
-summary active title subtitle aside =
-    sidebarItem active
+summary key active title subtitle aside =
+    sidebarItem key
+        active
         [ horizontalFlow
             [ verticalFlow
                 [ div [ css [ fontWeight Css.bold, fontSize (em 1.3) ] ] [ text title ]
@@ -56,10 +57,10 @@ main =
                     , horizontalFlow
                         [ sidebar
                             [ sidebarDivider "Unscheduled"
-                            , summary False "Item 1" "Author" "Note"
+                            , summary "item1" False "Item 1" "Author" "Note"
                             , sidebarDivider "Sun 15 Jul 2018"
-                            , summary True "Item 2" "Author" "9:00 AM"
-                            , summary False "Item 3" "Author" "12:00 PM"
+                            , summary "item2" True "Item 2" "Author" "9:00 AM"
+                            , summary "item2" False "Item 3" "Author" "12:00 PM"
                             ]
                         , page
                             [ paper
