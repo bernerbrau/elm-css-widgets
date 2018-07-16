@@ -39,6 +39,7 @@ screen voidColor children =
             , flexDirection column
             , justifyContent stretch
             , alignItems stretch
+            , overflow Css.hidden
             ]
         ]
         children

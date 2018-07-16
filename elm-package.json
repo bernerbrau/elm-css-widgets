@@ -1,5 +1,5 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.3",
     "summary": "Opinionated, Drop-In widgets for beautiful Elm webapps.",
     "repository": "https://github.com/bernerbrau/elm-css-widgets.git",
     "license": "BSD3",
