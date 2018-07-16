@@ -17,7 +17,8 @@ page : List (Html msg) -> Html msg
 page children =
     HS.div
         [ css
-            [ flex (px 1)
+            [ position relative
+            , flex (px 1)
             , padding2 (px 16) (px 64)
             , overflowY auto
             ]

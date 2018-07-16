@@ -18,10 +18,11 @@ paper : List (Html msg) -> Html msg
 paper children =
     HS.div
         [ css
-            [ backgroundColor white
+            [ position relative
+            , backgroundColor white
             , padding2 (px 8) (px 16)
             , borderRadius (px 4)
-            , boxShadow5 (px 0) (px 1) (px 1) (px 1) nearOpaqueBlack
+            , boxShadow4 (px 0) (px 1) (px 1) nearOpaqueBlack
             ]
         ]
         children
